@@ -1,0 +1,32 @@
+Here are the steps to setup the code after Anaconda is installed:
+
+1) Deactivate base environment by running this command in a terminal: 
+conda config --set auto_activate_base False
+
+2) Create new conda environment for this project:
+conda create --name nlp
+
+3)Go to the folder containing scrapper and model code and activate the environment:
+conda activate nlp
+
+4) Install Jupyter notebook:
+conda install -c anaconda jupyter
+
+5) Also install pip (a package management system for python):
+conda install pip
+
+6) Enter this command to run jupyter notebook:
+jupyter notebook  
+
+7) Open the notebook named Scrapping if you want to scrape comments and run the first cell with ctrl/cmd + enter. You'll get a couple of errors because packages won't be installed. Don't worry. Create a new cell by clicking on the + button in the above given menu and type in the following commands:
+!pip install pandas
+!pip install requests
+!pip install BeautifulSoup
+!pip install selenium
+!pip install lxml
+
+And run the cell using command + enter keys and the packages will be installed.
+
+8) Then delete this cell. And start running the cells one by one. In the second cell, change the url to the channel from which you want to scrape data. In the last line of last cell, change the name of file in which you want to save the data to name_of_channel_comments.csv
+
+9) The comments will be scraped and saved in that csv file.
